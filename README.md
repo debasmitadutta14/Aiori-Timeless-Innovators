@@ -282,31 +282,32 @@ for port in 5300 5303 5304 5305; do
   dig @14.194.176.205 -p $port $domain SOA +dnssec +multiline
   echo ""
 done
+```
 ---
 
 ## 🧩 Implementation Phases
 
-| Phase | Description | Status |
-|--------|--------------|--------|
-| **Phase 1** | Install `liboqs` and `OQS-OpenSSL` PQC toolkits | ✅ Completed |
-| **Phase 2** | Generate simulated PQC keys (`.pem`) | ✅ Completed |
-| **Phase 3** | MySQL database setup for PowerDNS | ⚙️ *Completed locally for `iem.local`; pending `.IN` delegation* |
-| **Phase 4** | PowerDNS multi-instance configuration | ⚙️ *Operational for local test zones; `.IN` extension in progress* |
-| **Phase 5** | Systemd service isolation and automation | ✅ Completed |
-| **Phase 6** | PQC zone signing and verification | ✅ Completed |
-| **Phase 7** | Latency & performance benchmarking | ✅ Completed (local) |
-| **Phase 8** | Delegated `.IN` validation & IETF feedback | ⏳ Planned (future phase) |
+|    Phase    |                    Description                  |                                Status                              |
+|-------------|-------------------------------------------------|--------------------------------------------------------------------|
+| **Phase 1** | Install `liboqs` and `OQS-OpenSSL` PQC toolkits |                            ✅ Completed                            |
+| **Phase 2** |     Generate simulated PQC keys (`.pem`)        |                            ✅ Completed                            |
+| **Phase 3** |      MySQL database setup for PowerDNS          |  ⚙️ *Completed locally for `iem.local`; pending `.IN` delegation*  |
+| **Phase 4** |    PowerDNS multi-instance configuration        | ⚙️ *Operational for local test zones; `.IN` extension in progress* |
+| **Phase 5** |   Systemd service isolation and automation      |                            ✅ Completed                            |
+| **Phase 6** |      PQC zone signing and verification          |                            ✅ Completed                            |
+| **Phase 7** |      Latency & performance benchmarking         |                         ✅ Completed (local)                       |
+| **Phase 8** |   Delegated `.IN` validation & IETF feedback    |                         ⏳ Planned (future phase)                  |
 
 ---
 
 ## 🌐 Local Testbed Configuration
 
-| Port | Domain | Algorithm | Database | Description |
-|------|---------|------------|-----------|--------------|
-| 5300 | `iem.local` | RSA/ECDSA | `powerdns` | Baseline DNSSEC zone |
-| 5305 | `dilithium.iem.local` | Dilithium3 | `pdns_dilithium` | PQC lattice-based zone |
-| 5304 | `falcon.iem.local` | Falcon512 | `pdns_falcon` | Compact lattice PQC zone |
-| 5303 | `sphincs.iem.local` | SPHINCS+ | `pdns_sphincs` | Hash-based PQC zone |
+| Port |          Domain       |  Algorithm |      Database    |        Description       |
+|------|-----------------------|------------|------------------|--------------------------|
+| 5300 |       `iem.local`     |  RSA/ECDSA |    `powerdns`    |   Baseline DNSSEC zone   |
+| 5305 | `dilithium.iem.local` | Dilithium3 | `pdns_dilithium` |  PQC lattice-based zone  |
+| 5304 |   `falcon.iem.local`  | Falcon512  |   `pdns_falcon`  | Compact lattice PQC zone |
+| 5303 |   `sphincs.iem.local` |  SPHINCS+  |   `pdns_sphincs` |    Hash-based PQC zone   |
 
 Each runs in isolation under its own PowerDNS instance and MySQL database, controlled through systemd.
 
