@@ -163,8 +163,8 @@ Repeat with respective database and port numbers for each algorithm.
 |-----------|--------|------|----------|-------|
 | Traditional |	pdns.conf	| powerdns	| 5300 |
 | Dilithium3 |	pdns-dilithium.conf |	pdns_dilithium	| 5305 |
-| Falcon512	pdns-falcon.conf	| pdns_falcon	| 5304 |
-| SPHINCS+	pdns-sphincs.conf	| pdns_sphincs	| 5303 |
+| Falcon512	| pdns-falcon.conf	| pdns_falcon	| 5304 |
+| SPHINCS+	| pdns-sphincs.conf	| pdns_sphincs	| 5303 |
 
 ## Phase 6 – Populate DNS Zones**
 ```dns
