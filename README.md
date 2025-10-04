@@ -68,10 +68,13 @@ It serves as a baseline framework for upcoming **delegated `.IN` integration**.
 
 ## 🖥️ VM 100 – PowerDNS Authoritative Server (PQC-Enabled)
 
-**Hostname: iem-ubuntu-dns-server**
-**IP Address: 14.194.176.205**
-**Role: Authoritative DNS Server (Baseline + PQC variants)**
-**Databases:**
+Hostname: iem-ubuntu-dns-server
+
+IP Address: 14.194.176.205
+
+Role: Authoritative DNS Server (Baseline + PQC variants)
+
+Databases:
 - powerdns (Traditional)
 - pdns_dilithium
 - pdns_falcon
@@ -156,11 +159,12 @@ local-port=5305
 
 ```
 Repeat with respective database and port numbers for each algorithm.
-Algorithm	Config File	Database	Port
-Traditional	pdns.conf	powerdns	5300
-Dilithium3	pdns-dilithium.conf	pdns_dilithium	5305
-Falcon512	pdns-falcon.conf	pdns_falcon	5304
-SPHINCS+	pdns-sphincs.conf	pdns_sphincs	5303
+| Algorithm |	Config | File	| Database	| Port |
+|-----------|--------|------|----------|-------|
+| Traditional |	pdns.conf	| powerdns	| 5300 |
+| Dilithium3 |	pdns-dilithium.conf |	pdns_dilithium	| 5305 |
+| Falcon512	pdns-falcon.conf	| pdns_falcon	| 5304 |
+| SPHINCS+	pdns-sphincs.conf	| pdns_sphincs	| 5303 |
 
 ## Phase 6 – Populate DNS Zones**
 ```dns
@@ -233,10 +237,13 @@ sudo netstat -tulpn | grep 530
 
 ## 🧠 VM 103 – DNS Client Setup (No Resolver)
 
-**Hostname: iem-ubuntu-dns-client**
-**IP Address: 14.194.176.204**
-**Role: DNS Client querying PQC-enabled PowerDNS server directly**
-**Server: 14.194.176.205**
+Hostname: iem-ubuntu-dns-client
+
+IP Address: 14.194.176.204
+
+Role: DNS Client querying PQC-enabled PowerDNS server directly
+
+Server: 14.194.176.205
 
 ## Phase 1 – Install DNS Client Tools**
 ```bash
