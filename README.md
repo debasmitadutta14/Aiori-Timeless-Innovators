@@ -1,7 +1,6 @@
 # Aiori-Timeless-Innovators
 Problem Statement 03: Post-Quantum DNSSEC Testbed under a Delegated .IN Domain
-
-### Problem Statement 03 — Reference: PQIP WG & PQDNSSEC Side Meetings  
+ 
 **Institution:** Institute of Engineering & Management (IEM-UEM), Kolkata  
 **Team Name:** Timeless Innovators  
 
