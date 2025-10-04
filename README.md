@@ -66,6 +66,28 @@ It serves as a baseline framework for upcoming **delegated `.IN` integration**.
 - **Falcon512 (Compact Lattice-based PQC)**
 - **SPHINCS+ (Hash-based PQC)**
 
+### Phase 1 – Install Prerequisites and PowerDNS**
+```bash
+sudo apt update
+sudo apt install -y pdns-server pdns-backend-mysql mysql-server dnsutils git build-essential cmake libssl-dev
+
+pdns_server --version
+
+
+## Complete Example Structure:
+```markdown
+# PowerDNS with MySQL Backend
+
+## Prerequisites
+- Ubuntu/Debian system
+- Root/sudo access
+
+## Installation
+
+```bash
+sudo apt update
+sudo apt install -y pdns-server pdns-backend-mysql mysql-server dnsutils git build-essential cmake libssl-dev
+pdns_server --version
 ---
 
 ## 🧩 Implementation Phases
