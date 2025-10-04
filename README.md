@@ -159,7 +159,7 @@ local-port=5305
 
 ```
 Repeat with respective database and port numbers for each algorithm.
-| Algorithm |	Config | File	| Database	| Port |
+| Algorithm |	Config File	| Database	| Port |
 |-----------|--------|------|----------|-------|
 | Traditional |	pdns.conf	| powerdns	| 5300 |
 | Dilithium3 |	pdns-dilithium.conf |	pdns_dilithium	| 5305 |
