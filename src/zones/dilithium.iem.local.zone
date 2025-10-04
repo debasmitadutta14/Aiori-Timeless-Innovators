@@ -1,0 +1,13 @@
+$ORIGIN dilithium.iem.local.
+$TTL 3600
+@ IN SOA ns1.dilithium.iem.local. admin.dilithium.iem.local. (
+    2024091801 ; Serial
+    3600
+    1800
+    604800
+    86400
+)
+@ IN NS ns1.dilithium.iem.local.
+ns1 IN A 14.194.176.205
+www IN A 14.194.176.205
+test IN A 14.194.176.205
